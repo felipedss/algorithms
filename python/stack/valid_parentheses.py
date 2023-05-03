@@ -12,7 +12,7 @@ class Solution(object):
                     return False
                 
                 top = self.stack.pop(len(self.stack) -1)
-                print(top)
+
                 if (top == "(" and character != ")") or (top == "[" and character != "]")  or (top == "{" and character != "}"):
                     return False
 
