@@ -11,12 +11,10 @@ class Solution(object):
                 if len(self.stack) == 0:
                     return False
                 
-                top = self.stack[len(self.stack) -1]
-
+                top = self.stack.pop(len(self.stack) -1)
+                print(top)
                 if (top == "(" and character != ")") or (top == "[" and character != "]")  or (top == "{" and character != "}"):
                     return False
-                else:
-                    self.stack.pop(len(self.stack) -1)
 
         return len(self.stack) == 0
                 
