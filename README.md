@@ -1,5 +1,11 @@
 # data-structure
 
+## Install black formatter
+
+```bash
+pip install black
+```
+
 ## Big O notation
 
 - Cheat Sheet: https://flexiple.com/algorithms/big-o-notation-cheat-sheet/
@@ -66,3 +72,29 @@ But, for linked-lists we've got the overhead of storing a pointer as well.
 ### Most common algorithm:
 
 - Balanced brackets
+
+---
+
+## Queue
+
+The queue follows the FIFO (First in - First out) structure where the first element inserted would be the first element deleted. It's like a line of people waiting the bus.
+
+Queues can be implemented with either an array or a linked list (with tail pointer).
+For array we have a maximum size, and for linke-lists we don't.
+But, for linked-lists we've got the overhead of storing a pointer as well.
+
+- Enqueue = O(1)
+- Dequeue = O(1)
+- isEmpty = O(1)
+
+### Arrays
+
+[Implementation](python/queue/queue_array.py)
+
+### Fixed-sized array
+
+[Pending to implement]
+
+### LinkedLists
+
+[Pending to implement]
