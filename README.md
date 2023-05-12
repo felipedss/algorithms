@@ -98,3 +98,68 @@ But, for linked-lists we've got the overhead of storing a pointer as well.
 ### LinkedLists
 
 [Pending to implement]
+
+---
+
+## Hash Table
+
+Hash tables represents a dynamic set of data for INSERT, DELETE and SEARCH
+
+Where hash table really shine is search:
+
+- Average: O(1)
+- Worse case O(n))
+
+Hash table sometimes is used interchangeably with dictionary.
+
+```python
+dictionary = {
+    'a': 1,
+    'b': 9,
+    'c': 'nebraska',
+    'd': True
+}
+```
+
+- Dictionary = generic way to MAP keys to values
+- Hash table = implementation of a dictionary using a hash function
+
+With hash table we introduce **hash-functions** that maps keys to a location in the table that holds data.
+
+When two different hash functions (keys) points to the same data in the hash table, we called that as collision.
+
+How to acomoddate collisions: Through **chaining**
+
+![img](img/hash-table-collision.png)
+
+To support chaining we introduce linked lists and our table locations become a bucket of values.
+
+### Hash function goals
+
+- Goals
+
+  - Maximizes randomness
+  - Produces the least amount of colisions
+
+- Examples
+
+  - division
+  - multiplication
+  - universal hashing
+  - dynamic perfect hashing
+
+### Hash by division
+
+This is one of the simplest ways to create a hash function, although it may not be the most efficient in all cases.
+
+```python
+def hashing_by_division(k, m):
+    return k % m
+
+k = 50
+m = 13
+print(f'hash of 50 with table size 13 --> {hashing_by_division(k, m)}') # The hash value here is 11
+```
+
+- [See more here - Code](python/queue/queue_array.py)
+- [Source - Youtube link](https://www.youtube.com/watch?v=knV86FlSXJ8)
