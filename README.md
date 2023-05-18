@@ -163,3 +163,26 @@ print(f'hash of 50 with table size 13 --> {hashing_by_division(k, m)}') # The ha
 
 - [See more here - Code](python/queue/queue_array.py)
 - [Source - Youtube link](https://www.youtube.com/watch?v=knV86FlSXJ8)
+
+---
+
+## Binary Search
+
+Given a list of sorted items, the binary search algorithm makes a binary decision, **left or right**, **greater than or less than**, **alphabetically**
+
+To apply binary search in any data structure, the data structure must maintain the following properties:
+
+- The data structure must be sorted.
+- Access to any element of the data structure takes constant time.
+
+The most popular use of a binary search is a sorted array.
+
+- [Recursive Implementation - example](python/binary-search/binary-search-recursive.py)
+- [Iterative Implementation - example](python/binary-search/binary-search-iterative.py)
+
+Big O of Binary Search
+
+```
+O(log n)  =>  worse and average case
+O(1)      =>  Best case
+```
