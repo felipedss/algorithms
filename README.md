@@ -186,3 +186,84 @@ Big O of Binary Search
 O(log n)  =>  worse and average case
 O(1)      =>  Best case
 ```
+
+---
+
+## Bit Manipulation
+
+[Reference Implementation - example](python/bit-manipulation/bit-manipulation.py)
+
+When we store a number in the computer, we store a series of ones and zeros (everything is a bit)
+
+Operators:
+
+- AND = &
+- OR = |
+- XOR (Exclusive OR) = ˆ
+- NOT = ~
+- LEFT SHIFT = <<
+- RIGHT SHIFT = >>
+
+### AND
+
+Only true if both inputs are true
+
+```
+0 & 0 = 0
+0 & 1 = 0
+1 & 0 = 0
+1 & 1 = 1
+```
+
+### OR
+
+True if any input bit is true
+
+```
+0 | 0 = 0
+0 | 1 = 1
+1 | 0 = 1
+1 | 1 = 1
+```
+
+### XOR
+
+True if and only one input bit is true
+
+```
+0 | 0 = 0
+0 | 1 = 1
+1 | 0 = 1
+1 | 1 = 0
+```
+
+### NOT
+
+One's complement operator, flips the input bit **~0 = 1**, **~1 = 0**
+
+```
+~0 = 1
+~1 = 0
+```
+
+### LEFT SHIFT
+
+Left shift operator is a binary operator which shift the some number of bits, in the given bit pattern, to the left and append 0 at the end.
+
+```
+00010110
+00000010 (shift it 2 places)
+========
+01011000
+```
+
+### RIGHT SHIFT
+
+Right shift operator is a binary operator which shift the some number of bits, in the given bit pattern, to the right and append 1 at the end.
+
+```
+00010110
+00000010 (shift it 2 places)
+========
+00000101
+```
