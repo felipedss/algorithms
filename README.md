@@ -267,3 +267,31 @@ Right shift operator is a binary operator which shift the some number of bits, i
 ========
 00000101
 ```
+
+## Trees
+
+A Tree data structure is a hierarchical structure that is used to represent and organize data in a way that is easy to navigate and search. It is a collection of nodes that are connected by edges and has a hierarchical relationship between the nodes
+
+[Generic example with DFS search](./python/tree/dfs_generic.py)
+
+### Tree Waks:
+
+**DFS - Depth first searchs** (a tipically recursive algorithm)
+
+We completely traverse one sub-tree before exploring a sibling sub-tree
+
+- Stack
+- time complexity: O(n)
+- space complexity: best: O(log n) - avg. height of tree worst: O(n)
+- inorder (DFS: left, root, right)
+- postorder (DFS: left, right, root)
+- preorder (DFS: root, left, right)
+
+**BFS - Breadth First search**
+
+We traverse all nodes at one level before progressing to the next level
+
+- Queue
+- level order (BFS, using queue)
+- time complexity: O(n)
+- space complexity: best: O(1), worst: O(n/2)=O(n)
