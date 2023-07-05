@@ -268,6 +268,8 @@ Right shift operator is a binary operator which shift the some number of bits, i
 00000101
 ```
 
+---
+
 ## Trees
 
 A Tree data structure is a hierarchical structure that is used to represent and organize data in a way that is easy to navigate and search. It is a collection of nodes that are connected by edges and has a hierarchical relationship between the nodes
@@ -295,3 +297,29 @@ We traverse all nodes at one level before progressing to the next level
 - level order (BFS, using queue)
 - time complexity: O(n)
 - space complexity: best: O(1), worst: O(n/2)=O(n)
+
+---
+
+## Graphs
+
+Important points:
+
+- Familiarize yourself with each representation and its pros & cons
+- BFS and DFS - know their computational complexity, their trade offs, and how to implement them in real code
+- When asked a question, look for a graph-based solution first, then move on if none
+- BFS uses Queue
+- BFS uses Stack
+
+The only catch here is, that, unlike trees, graphs may contain cycles, so we may come to the same node again. To avoid processing a node more than once, we divide the vertices into two categories:
+
+- Visited
+- Not visited
+
+Implementations:
+
+- [BFS](./python/graph/bfs_graph.py)
+- [DFS](./python/graph/dfs_graph.py)
+
+Resources:
+
+[Reference 1](https://www.youtube.com/watch?v=pcKY4hjDrxk)
