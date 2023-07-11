@@ -323,3 +323,22 @@ Implementations:
 Resources:
 
 [Reference 1](https://www.youtube.com/watch?v=pcKY4hjDrxk)
+
+---
+
+## Sorting
+
+### Merge Sort
+
+Merge sort is defined as a sorting algorithm that works by dividing an array into smaller subarrays, sorting each subarray, and then merging the sorted subarrays back together to form the final sorted array.
+
+Merge sort is a recursive algorithm that continuously splits the array in half until it cannot be further divided i.e., the array has only one element left (an array with one element is always sorted). Then the sorted subarrays are merged into one sorted array.
+
+- Time Complexity: O(n log n)
+- Space complexity: O(n) - Merge sort requires additional memory to store the merged sub-arrays during the sorting process.
+
+[Top-down approach implementation](./python/sorting/merge-sort-top-down.py)
+
+[Bottom-up approach implementation](./python/sorting/merge-sort-bottom-up.py)
+
+### Quick Sort
