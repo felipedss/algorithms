@@ -342,3 +342,20 @@ Merge sort is a recursive algorithm that continuously splits the array in half u
 [Bottom-up approach implementation](./python/sorting/merge-sort-bottom-up.py)
 
 ### Quick Sort
+
+//Need to implement
+
+## Dynamic Programming
+
+Dynamic programming is a development method that seeks to find the solution of several subproblems to, then, find the solution of the general problem.
+
+Fibonacci is a classical implementation
+
+### Top-Down Approach
+
+- Uses Memoization (cache)
+- Recursive - [Implentation Example](./python/dynamic-programming/fibonacci_bottom_up.py)
+
+### Bottom-up approach
+
+- Iterative - [Implentation Example](./python/dynamic-programming/fibonacci_bottom_up.py)
