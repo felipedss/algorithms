@@ -8,8 +8,101 @@ pip install black
 
 ## Big O notation
 
+Big O Notation is a metric for determining an algorithm's efficiency. Put simply, it gives an estimate of how long it takes your code to run on different sets of inputs. You can also see it as a way to measure how effectively your code scales as your input size increases.
+
+### Time Complexity
+
+The time complexity, computational complexity or temporal complexity describes the amount of time necessary to execute an algorithm. It is not a measure of the actual time taken to run an algorithm, instead, it is a measure of how the time taken scales with change in the input length.
+
+### Space Complexity
+
+The overall amount of memory or space utilized by an algorithm/program, including the space of input values for execution, is called space complexity. To determine space complexity, simply compute how much space the variables in an algorithm/a program take up.
+
 - Cheat Sheet: https://flexiple.com/algorithms/big-o-notation-cheat-sheet/
 - Video: https://www.youtube.com/watch?v=v4cd1O4zkGw
+
+Following are the key time and space complexities:
+
+- Constant: O(1)
+- Linear time: O(n)
+- Logarithmic time: O(n log n)
+- Quadratic time: O(n^2)
+- Exponential time: 2 ^(n)
+- Factorial time: O(n!)
+
+### Constant Time: O(1)
+
+When there is no dependence on the input size n, an algorithm is said to have a constant time of order O(1).
+
+```python
+def example_function(lst):
+    print("First element of list: ", lst[0])
+```
+
+### Linar Time: O(n)
+
+Linear time is achieved when the running time of an algorithm increases linearly with the length of the input. This means that when a function runs for or iterates over an input size of n, it is said to have a time complexity of order O(n).
+
+```python
+def example_function(lst, size):
+    for i in range(size):
+        print("Element at index", i, " has value: ", lst[i])
+```
+
+Note: Even if you iterate over half the array, the runtime still depends on the input size, so it will be considered O(n).
+
+### Logarithm Time: O(log n)
+
+When the size of the input data decreases in each step by a certain factor, an algorithm will have logarithmic time complexity. This means as the input size grows, the number of operations that need to be executed grows comparatively much slower.
+
+Example
+Binary search and finding the largest/smallest element in a binary tree are both examples of algorithms having logarithmic time complexity.
+
+```python
+def binarySearch(lst, x):
+    low = 0
+    high = len(lst)-1
+    # Repeat until the pointers low and high meet each other
+    while low <= high:
+
+        mid = low + (high - low)//2
+
+        if lst[mid] == x:
+            return mid
+
+        elif lst[mid] < x:
+            low = mid + 1
+
+        else:
+            high = mid - 1
+
+    return -1
+```
+
+### Quadratic Time: O(n^2)
+
+The performance of a quadratic time complexity algorithm is directly related to the squared size of the input data collection. You will encounter such time complexity in programs when you perform several iterations on data sets.
+
+```python
+def quadratic_function(lst, size):
+    for i in range(size):
+        for j in range(size):
+            print("Iteration : " i, "Element of list at ", j, " is ", lst[j])
+```
+
+We have two nested loops in the example above. If the array has n items, the outer loop will execute n times, and the inner loop will execute n times for each iteration of the outer loop, resulting in n^2 prints. If the size of the array is 10, then the loop runs 10x10 times. So the function ten will print 100 times. As a result, this function will take O(n^2) time to complete.
+
+### Exponential Time: O(2^n)
+
+With each addition to the input (n), the growth rate doubles, and the algorithm iterates across all subsets of the input elements. When an input unit is increased by one, the number of operations executed is doubled.
+
+```python
+def fibonacci(n):
+    if (n <= 1):
+        return 1
+    else:
+        return fibonacci(n - 2) + fibonacci(n - 1)
+```
 
 ---
 
